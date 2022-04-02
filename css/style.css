@@ -1,0 +1,110 @@
+html,
+body {
+    font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: #593D3D;
+    background-color: #F4F5F7;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    max-width: 1090px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 15px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+}
+
+header ul li{
+    margin-left: 30px;
+}
+
+header ul li a{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    color: inherit;
+    
+}
+
+header ul li a.sign-up {
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 10px 15px;
+    margin-left: 60px;
+
+}
+
+.main{
+    background-image: url('../img/bg.svg');
+    background-color: #F4F5F7;
+    background-repeat: no-repeat;
+    background-position: right 10px top;
+    padding-top: 45px;
+}
+
+.main-content{
+    display: flex;
+    margin-top: 50px;
+}
+
+.main-content div:first-child{
+    width: 40%;
+}
+
+.main-content div:last-child{
+    width: 60%;
+    padding-left: 85px;
+}
+
+.main-content .c-yellow{
+    color: #FFD836;
+}
+.main-content .c-blue{
+    color: #6882EF;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.main-content h1{
+    margin: 0px;
+    font-size:49px;
+    line-height: 57px;
+}
+
+.main-content p{
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+
+.main-content button{
+    background: transparent linear-gradient(90deg, #8DA3FF 0%, #6781EF 100%) 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 29px;
+    padding: 15px 50px;
+    border: 0px;
+}
+
