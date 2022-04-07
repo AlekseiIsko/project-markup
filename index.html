@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,500;1,900&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="libs/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
@@ -43,7 +45,7 @@
                         so
                         that your
                         surroundings are clean, but not to create a constant torture of cleaning? Of course it is!</p>
-                    <button type="button" class="btn book">Book now</button>
+                    <button type="button" class="btn books">Book now</button>
                 </div>
                 <div>
                     <img src="img/wetfloor.svg" alt="wetfloor" />
@@ -94,31 +96,220 @@
     <!-- Calendar -->
     <section class="book">
         <div class="container">
-            <h1>Book Now</h1>
-            <div class="avalible-people">
+            <div class="book-section">
                 <div>
-                    <div class="photo">
-                        <img src="img/girl1.png" alt="photo" />
+                    <h1>Book Now</h1>
+                    <button type="button" class="choose">Regularly Cleaning</button>
+                    <h6>Choose available dates:</h6>
+                    <div class="calendar">
+                        <h3>March 2021</h3>
+                        <div class="calendar-inner">
+                            <button type="button" class="calendar-btn">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </button>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>M</td>
+                                        <td>T</td>
+                                        <td>W</td>
+                                        <td>T</td>
+                                        <td>F</td>
+                                        <td>S</td>
+                                        <td>S</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>7</td>
+                                        <td>8</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="disabled">10</td>
+                                        <td class="disabled">11</td>
+                                        <td>12</td>
+                                        <td class="active">13</td>
+                                        <td>14</td>
+                                        <td>15</td>
+                                        <td>16</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="disabled">17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>20</td>
+                                        <td>21</td>
+                                        <td>22</td>
+                                        <td>23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td>27</td>
+                                        <td>28</td>
+                                        <td>29</td>
+                                        <td>30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>31</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button type="button" class="calendar-btn">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="name">
-                        <h3>Albina</h3>
-                        <p>Deep Cleaning Expert</p>
-                        <div class="rating">Rating <span>4.3</span></div>
-                    </div>
-                    <div class="time">
-                        <ul>
-                            <li>9:00</li>
-                            <li>12:00</li>
-                            <li>15:00</li>
-                            <li>17:00</li>
-                        </ul>
-                        <p>$<strong>50</strong> per service</p>
+                </div>
+                <div>
+                    <h6>Choose available expert and time:</h6>
+                    <div class="avalible-people">
+                        <div>
+                            <div class="photo">
+                                <img src="img/girl1.png" alt="photo" />
+                            </div>
+                            <div class="name">
+                                <h3>Albina</h3>
+                                <p>Deep Cleaning Expert</p>
+                                <div class="rating">Rating <span>4.3</span></div>
+                            </div>
+                            <div class="time">
+                                <ul>
+                                    <li>
+                                        <span>09:00</span>
+                                    </li>
+                                    <li>
+                                        <span>12:00</span>
+                                    </li>
+                                    <li>
+                                        <span>15:00</span>
+                                    </li>
+                                    <li>
+                                        <span>17:00</span>
+                                    </li>
+                                </ul>
+                                <p>$<strong>50</strong> per service</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="photo">
+                                <img src="img/girl2.png" alt="photo" />
+                            </div>
+                            <div class="name">
+                                <h3>Kristina</h3>
+                                <p>Window Cleaning Expert</p>
+                                <div class="rating">Rating <span>5.0</span></div>
+                            </div>
+                            <div class="time">
+                                <ul>
+                                    <li>
+                                        <span>09:00</span>
+                                    </li>
+                                    <li>
+                                        <span>12:00</span>
+                                    </li>
+                                    <li>
+                                        <span>15:00</span>
+                                    </li>
+                                    <li>
+                                        <span>17:00</span>
+                                    </li>
+                                </ul>
+                                <p>$<strong>50</strong> per service</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="photo">
+                                <img src="img/girl3.png" alt="photo" />
+                            </div>
+                            <div class="name">
+                                <h3>Grace</h3>
+                                <p>Regular Cleaning Expert</p>
+                                <div class="rating">Rating <span>2.1</span></div>
+                            </div>
+                            <div class="time">
+                                <ul>
+                                    <li>
+                                        <span>09:00</span>
+                                    </li>
+                                    <li>
+                                        <span>12:00</span>
+                                    </li>
+                                    <li>
+                                        <span>15:00</span>
+                                    </li>
+                                    <li>
+                                        <span>17:00</span>
+                                    </li>
+                                </ul>
+                                <p>$<strong>50</strong> per service</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="photo">
+                                <img src="img/girl4.png" alt="photo" />
+                            </div>
+                            <div class="name">
+                                <h3>Jane</h3>
+                                <p>Office Cleaning Expert</p>
+                                <div class="rating">Rating <span>3.9</span></div>
+                            </div>
+                            <div class="time">
+                                <ul>
+                                    <li>
+                                        <span>09:00</span>
+                                    </li>
+                                    <li>
+                                        <span>12:00</span>
+                                    </li>
+                                    <li>
+                                        <span>15:00</span>
+                                    </li>
+                                    <li>
+                                        <span>17:00</span>
+                                    </li>
+                                </ul>
+                                <p>$<strong>50</strong> per service</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Calendar END -->
+    <!-- Bottom part -->
+    <footer>
+        <div class="container">
+            <div class="bottom-part">
+                <img src="img/logo.svg" alt="logo" />
+                <p>Plaut, 10 <br> Science Park
+                    <br> 76706, Rehovot <br> Israel <br> <br>Phone: 054-56-99-350 <br> E-mail: go@tel-ran.com</p>
+            </div>
+        </div>>
+    </footer>
+    <!-- Bottom part END -->
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 
