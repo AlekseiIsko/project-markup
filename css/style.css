@@ -55,16 +55,14 @@ header ul li a.sign-up {
     border: 2px solid white;
     border-radius: 25px;
     padding: 10px 15px;
-    margin-left: 60px;
 
 }
 
 .main {
-    background-image: url('../img/bg.svg');
-    background-color: #F4F5F7;
-    background-repeat: no-repeat;
-    background-position: right 10px top;
+    background: rgb(244,245,247);
+    background: linear-gradient(120deg, rgba(244,245,247,1) 35%, rgba(104,130,239,1) 100%);
     padding-top: 45px;
+    padding-bottom: 55px;
 }
 
 .main-content {
