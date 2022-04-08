@@ -36,6 +36,7 @@ header {
 header ul {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 header ul li {
@@ -47,6 +48,7 @@ header ul li a {
     text-decoration: none;
     font-size: 18px;
     color: inherit;
+    display: block;
 }
 
 header ul li a.sign-up {
@@ -54,6 +56,7 @@ header ul li a.sign-up {
     border: 2px solid white;
     border-radius: 25px;
     padding: 10px 15px;
+    display: block;
 }
 
 .main {
@@ -132,10 +135,12 @@ header ul li a.sign-up {
     font-size: 24px;
     line-height: 29px;
     color: #FFFFFF;
-    width: 25%;
+    flex: 1;
     text-align: center;
     padding: 65px 0 54px;
     position: relative;
+    white-space: nowrap;
+    margin-right: 20px;
 }
 
 .tab-menu ul li.active {
@@ -211,7 +216,11 @@ header ul li a.sign-up {
     align-items: flex-start;
 }
 
-.avalible-people>div:not(:last-child) {
+.avalible-people > div .photo {
+    flex-shrink: 0;
+}
+
+.avalible-people > div:not(:last-child) {
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid black;
@@ -303,7 +312,6 @@ header ul li a.sign-up {
 
 .book-section div:first-child h6 {
     color: #FFFFFF;
-    margin-top: 33px;
 }
 
 .book-section div h6 {
@@ -443,13 +451,50 @@ table tr td {
     border-spacing: 0;
 }
 
+header.show-menu ul {
+    position: fixed;
+    z-index: 9;
+    background: rgb(0 0 0 / 85%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button {
+    background-color: transparent;
+    border: 0;
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    display: none;
+}
+
+.menu-button i {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display,inline-block);
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
+
+.menu-button i:before {
+    content: "\f0c9";
+}
+
 @media screen and (max-width: 1000px) {
     .tab-menu ul li {
         font-size: 18px;
-    }
-
-    .tab-menu ul li {
         padding: 35px 0 45px;
+        margin-right: 10px;
     }
 
     .calendar {
@@ -562,6 +607,106 @@ table tr td {
     }
 
     .calendar-inner table td {
-        padding: 10px 15px;
+        padding: 5px 15px;
+    }
+
+    .calendar {
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+
+    .book-section > div:first-child {
+        text-align: center;
+    }
+
+    .book-section .choose {
+        display: inline-flex;
+        margin-bottom: 15px;
+    }
+
+    .book-section div h6 {
+        margin-bottom: 10px;
+    }
+
+    .tab-menu ul {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 11;
+    }
+
+    header.show-menu .menu-button {
+        color: #fff;
+        position: fixed;
+        top: 30px;
+        right: 15px;
+    }
+
+    header.show-menu .menu-button i::before {
+        content: "\f00d";
+    }
+
+    header ul {
+        display: none;
+    }
+
+    header.show-menu ul {
+        display: flex;
+    }
+
+    header ul li {
+        margin-left: 0;
+    }
+
+    header ul li:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    header ul li a {
+        font-size: 24px;
+    }
+
+    .main {
+        background: linear-gradient(120deg, rgba(244, 245, 247, 1) 10%, rgba(104, 130, 239, 1) 100%);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .calendar-inner table td {
+        padding: 5px 7px;
+    }
+
+    .calendar-inner button {
+        padding: 7px;
+    }
+
+    .avalible-people .time ul {
+        flex-direction: column;
+    }
+
+    .avalible-people .name,
+    .avalible-people .time {
+        margin-left: 10px;
+    }
+
+    .avalible-people .time ul li span {
+        width: auto;
+    }
+
+    .bottom-part {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .calendar {
+        padding: 5px 7px;
     }
 }
