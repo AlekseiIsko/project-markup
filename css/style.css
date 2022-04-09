@@ -320,33 +320,42 @@ header ul li a.sign-up {
     margin-top: 0;
 }
 
-.book-section .choose {
+.book-section .choose::after {
+    content: '';
+    position: absolute;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-top: 0.75em solid #ffd836;
+    top: 0.85em;
+    right: 0.75em;
+    pointer-events: none;
+}
+
+.book-section .choose select {
     color: #F9D859;
-    font-size: 24px;
-    padding: 10px 15px;
     margin-bottom: 35px;
     border: 3px solid #F9D859;
     background: transparent;
     font-weight: bold;
-    display: flex;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+    padding: 0.375em 2.25em 0.375em 0.65em;
 }
+
+.book-section .choose select::-ms-expand {
+	display: none;
+}
+
 
 .bottom-part {
     display: flex;
     justify-content: space-between;
 }
 
-.choose {
+.choose{
+    display: inline-block;
     position: relative;
-}
-
-.choose::after {
-    content: '';
-    border-left: 0.5em solid transparent;
-    border-right: 0.5em solid transparent;
-    border-top: 0.75em solid #ffd836;
-    margin-left: 0.375em;
-    margin-top: 0.33em;
+    font-size:24px;
 }
 
 .calendar {
@@ -489,6 +498,7 @@ header.show-menu ul {
 .menu-button i:before {
     content: "\f0c9";
 }
+
 
 @media screen and (max-width: 1000px) {
     .tab-menu ul li {
